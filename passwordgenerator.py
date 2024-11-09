@@ -23,18 +23,18 @@ else:
 
    for number in range(nr_numbers):
       if number <= len(numbers):
-         random_number = random.randint(0, len(numbers)-1)
-         random_password.append(numbers[random_number])
+        #  random_number = random.randint(0, len(numbers)-1)
+         random_password.append(random.choice(numbers))
 
    for symbol in range(0,nr_symbols):
        if symbol <= len(symbols):
-          random_symbol = random.randint(0, len(symbols)-1)
-          random_password.append(symbols[random_symbol])
+        #   random_symbol = random.randint(0, len(symbols)-1)
+          random_password.append(random.choice(symbols))
 
    for letter in range(0, nr_letters):
       if letter <= len(letters):
-        random_letter = random.randint(0, len(letters)-1)
-        random_password.append(letters[random_letter])
+        # random_letter = random.randint(0, len(letters)-1)
+        random_password.append(random.choice(letters))
     
    random.shuffle(random_password)
    final_password = ''.join(random_password)
